@@ -1,0 +1,15 @@
+USE Shipment
+
+SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+GO
+
+BEGIN TRANSACTION Transaction2;
+GO
+
+UPDATE [Route]
+SET WharehouseEnd = 2
+WHERE RouteId = 2;
+GO
+
+-- COMMIT TRANSACTION Transaction2;
+-- GO
