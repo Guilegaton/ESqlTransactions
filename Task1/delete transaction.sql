@@ -1,0 +1,14 @@
+BEGIN TRANSACTION
+	DELETE FROM Wharehouse
+	WHERE WharehouseId = 8
+	SAVE TRANSACTION DeleteEight
+	DELETE FROM Wharehouse
+	WHERE WharehouseId = 16
+	SAVE TRANSACTION DeleteSixteen
+	DELETE FROM Wharehouse
+	WHERE WharehouseId = 24
+	SAVE TRANSACTION DeleteTwentyFour
+
+ROLLBACK TRANSACTION DeleteEight
+
+COMMIT
